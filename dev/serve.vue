@@ -12,10 +12,10 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <v-app>
-      <v-main>
+    <!-- <v-app>
+      <v-main> -->
         <my-button label="new" />
-      </v-main>
-    </v-app>
+      <!-- </v-main>
+    </v-app> -->
   </div>
 </template>

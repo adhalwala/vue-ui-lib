@@ -1,5 +1,5 @@
 <template>
-  <v-btn type="button" @click="onClick">{{ label }}</v-btn>
+  <button type="button" @click="onClick">{{ label }}</button>
 </template>
 
 <script>

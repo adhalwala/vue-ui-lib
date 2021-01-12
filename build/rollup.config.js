@@ -8,7 +8,7 @@ import replace from '@rollup/plugin-replace';
 import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
-import vuetify from './../src/plugins/vuetify';
+// import vuetify from './../src/plugins/vuetify';
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -23,7 +23,7 @@ const projectRoot = path.resolve(__dirname, '..');
 const baseConfig = {
   input: 'src/entry.js',
   plugins: {
-    vuetify,
+    // vuetify,
     preVue: [
       alias({
         resolve: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
@@ -72,7 +72,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/vue-ui-lib.esm.js',
+      file: 'dist/vue-ui-lib-abc.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -106,7 +106,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-ui-lib.ssr.js',
+      file: 'dist/vue-ui-lib-abc.ssr.js',
       format: 'cjs',
       name: 'VueUiLib',
       exports: 'named',
@@ -135,7 +135,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-ui-lib.min.js',
+      file: 'dist/vue-ui-lib-abc.min.js',
       format: 'iife',
       name: 'VueUiLib',
       exports: 'named',

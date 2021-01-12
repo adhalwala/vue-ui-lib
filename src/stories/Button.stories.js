@@ -7,7 +7,7 @@ export default {
   argTypes: {
     
   },
-  decorators: [() => ({ template: '<v-app><story/></v-app>' })],
+  // decorators: [() => ({ template: '<v-app><story/></v-app>' })],
 };
 
 const Template = (args, { argTypes }) => ({
