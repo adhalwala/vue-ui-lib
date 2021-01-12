@@ -1,17 +1,21 @@
 <script>
 import Vue from 'vue';
-import { VueUiLibSample } from '@/entry';
+import { MyButton } from '@/entry';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    VueUiLibSample,
+    MyButton,
   }
 });
 </script>
 
 <template>
   <div id="app">
-    <vue-ui-lib-sample />
+    <v-app>
+      <v-main>
+        <my-button label="new" />
+      </v-main>
+    </v-app>
   </div>
 </template>
