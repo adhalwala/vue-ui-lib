@@ -2,36 +2,37 @@
   "name": "vue-ui-lib",
   "version": "1.0.0",
   "description": "",
-
   "main": "dist/vue-ui-lib.ssr.js",
   "browser": "dist/vue-ui-lib.esm.js",
   "module": "dist/vue-ui-lib.esm.js",
   "unpkg": "dist/vue-ui-lib.min.js",
-
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
-
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@rollup/plugin-alias": "^2.2.0",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-replace": "^2.3.2",
+    "@storybook/addon-actions": "^6.1.12",
+    "@storybook/addon-essentials": "^6.1.12",
+    "@storybook/addon-links": "^6.1.12",
+    "@storybook/vue": "^6.1.12",
     "@vue/cli-plugin-babel": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
+    "babel-loader": "^8.2.2",
     "cross-env": "^7.0.2",
     "minimist": "^1.2.5",
     "rollup": "^2.7.3",
